@@ -1,26 +1,58 @@
 import React from 'react';
+
+const solutionReasons = [
+  {
+    title: "Strategic Location Research",
+    description: "Conduct thorough market analysis and footfall studies before choosing location",
+    icon: "🎯"
+  },
+  {
+    title: "Strong Brand Development", 
+    description: "Create compelling brand story and build emotional connections with customers",
+    icon: "💎"
+  },
+  {
+    title: "Complete Legal Compliance",
+    description: "Secure all necessary permits, licenses and meet regulatory requirements", 
+    icon: "✅"
+  },
+  {
+    title: "Digital Marketing Strategy",
+    description: "Build strong online presence and implement effective customer acquisition",
+    icon: "🚀"
+  },
+  {
+    title: "Smart Financial Planning",
+    description: "Implement proper budgeting, cash flow management and financial controls",
+    icon: "📊"
+  },
+];
+
 export default function WhatWeDo() {
   return (
-    <section className="py-20 px-4 bg-beige">
-      <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold mb-6">What We Do</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-          <div>
-            <h3 className="text-xl font-bold mb-2">Planning</h3>
-            <p>Expert guidance on location, branding, and menu design.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">Legal</h3>
-            <p>Streamlined license acquisition and tax compliance.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">Marketing</h3>
-            <p>Digital strategy, social media, and collaboration campaigns.</p>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold mb-2">Operations</h3>
-            <p>Tools for POS, inventory, and staff training.</p>
-          </div>
+    <section className="py-16 px-4 bg-gradient-to-br from-emerald-50 to-green-50">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold text-center text-emerald-600 mb-12">
+          How We Help Cafes Succeed
+        </h2>
+        
+        <div className="flex flex-wrap justify-center gap-6">
+          {solutionReasons.map((reason, index) => (
+            <div
+              key={index}
+              className="flex-1 min-w-64 max-w-72 bg-white rounded-xl shadow-lg border border-emerald-200 p-6 hover:shadow-xl hover:transform hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="text-center">
+                <div className="text-4xl mb-4">{reason.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                  {reason.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {reason.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
